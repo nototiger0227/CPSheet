@@ -14,10 +14,13 @@ int main()
     {
         int n;
         cin >> n;
-        if (n % 3 == 0)
-            cout << "Second" << endl;
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+            cin >> arr[i];
+        if (arr[0] == 1)
+            cout << "Yes" << endl;
         else
-            cout << "First" << endl;
+            cout << "No" << endl;
     }
 
     return 0;

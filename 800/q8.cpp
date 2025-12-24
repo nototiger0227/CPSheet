@@ -12,26 +12,20 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        string s;
-        cin >> s;
-        int cnt = 0;
+        int n, k;
+        cin >> n >> k;
+        vector<int> arr(n);
         bool flag = false;
         for (int i = 0; i < n; i++)
         {
-            if (s[i] == '.')
-                cnt++;
-        }
-        for (int i = 0; i < n - 2; i++)
-        {
-            if (s[i] == '.' && s[i + 1] == '.' && s[i + 2] == '.')
+            cin >> arr[i];
+            if (arr[i] == k)
                 flag = true;
         }
         if (flag)
-            cout << 2 << endl;
+            cout << "YES" << endl;
         else
-            cout << cnt << endl;
+            cout << "NO" << endl;
     }
 
     return 0;
